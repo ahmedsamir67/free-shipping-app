@@ -1,0 +1,30 @@
+# Learn more about configuring your checkout UI extension:
+# https://shopify.dev/docs/api/checkout-ui-extensions/latest/configuration
+
+# The version of APIs your extension will receive. Learn more:
+# https://shopify.dev/docs/api/usage/versioning
+api_version = "2026-07"
+
+[[extensions]]
+name = "Apply free shipping"
+handle = "apply-free-shipping"
+type = "ui_extension"
+uid = "0111c6b5-1489-f1fb-038a-00b6da9ad2d5b174095e"
+
+# Renders in the order summary, directly above the checkout discount code
+# field. This is a static target: like every checkout UI extension it must
+# still be activated once by the merchant via "Add app block" in the checkout
+# editor, but unlike a block target it is pinned to this position and cannot
+# be moved. It also stops rendering whenever checkout does not render the
+# reductions section.
+# https://shopify.dev/docs/api/checkout-ui-extensions/latest/targets
+[[extensions.targeting]]
+module = "./src/Checkout.jsx"
+target = "purchase.checkout.reductions.render-before"
+
+[extensions.capabilities]
+# This extension only calls the checkout Discounts API, which is available to
+# every purchase.checkout target by default. It reads no Storefront API data
+# and makes no external network calls, so both capabilities stay off.
+api_access = false
+network_access = false

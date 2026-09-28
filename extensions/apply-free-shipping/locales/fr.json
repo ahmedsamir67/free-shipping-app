@@ -1,0 +1,9 @@
+{
+  "offerHeading": "Livraison gratuite pour cette commande",
+  "offerBody": "Appliquez la réduction {{code}} et nous prenons en charge les frais de livraison de cette commande.",
+  "applyButton": "Appliquer la livraison gratuite",
+  "successHeading": "Livraison gratuite appliquée",
+  "successBody": "La réduction {{code}} a été appliquée. Votre nouveau total de livraison s'affiche ci-dessous.",
+  "errorHeading": "Impossible d'appliquer la livraison gratuite",
+  "errorBody": "Cette offre n'a pas pu être appliquée à votre commande. Elle est peut-être expirée ou votre commande ne remplit pas les conditions requises."
+}

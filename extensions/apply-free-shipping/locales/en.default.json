@@ -1,0 +1,9 @@
+{
+  "offerHeading": "Free shipping on this order",
+  "offerBody": "Apply the {{code}} discount and we'll cover the shipping cost for this order.",
+  "applyButton": "Apply Free Shipping",
+  "successHeading": "Free shipping applied",
+  "successBody": "The {{code}} discount has been applied. Your updated shipping total is shown below.",
+  "errorHeading": "We couldn't apply free shipping",
+  "errorBody": "This offer couldn't be applied to your order. It may have expired, or your order may not meet its requirements."
+}
