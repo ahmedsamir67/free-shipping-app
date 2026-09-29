@@ -12,10 +12,12 @@ automatically_update_urls_on_dev = true
 api_version = "2026-10"
 
 [access_scopes]
-# This app ships a single checkout UI extension, which runs on Shopify's
-# infrastructure and calls no Admin APIs, so it requests no access scopes.
+# The checkout UI extension itself needs none of these: it runs on Shopify's
+# infrastructure and calls no Admin API. These scopes exist for the Admin
+# GraphiQL client that `shopify app dev` serves, which is a development tool
+# and not part of what the extension does at runtime.
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = ""
+scopes = "read_products,write_products,read_orders,write_orders,read_customers,write_customers"
 
 [auth]
 redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
